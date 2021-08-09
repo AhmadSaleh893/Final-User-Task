@@ -1,0 +1,9 @@
+.idea
+.mvn
+TaskManager.iml
+HELP.md
+logging.log
+mvnw.cmd
+mvnw
+.service
+target

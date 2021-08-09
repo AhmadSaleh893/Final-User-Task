@@ -1,0 +1,57 @@
+<html lang="en" xmlnx="org.thymeleaf">
+<head>
+    <title>New User</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-color: darkgray;
+            color: white;
+        }
+
+        input{
+
+        }
+
+    </style>
+</head>
+<body>
+<script src="http://site2.com/myscript.js">
+    function clear() {
+
+        document.getElementById("pp").innerHTML="YES";
+        document.getElementById("username").value="";
+    }
+</script>
+<div class="container">
+<p id="pp"> Hello</p>
+    <form th:action="@{/newUser}" th:object="${user}" method="post">
+        <label >Username:</label>
+        <input id="username" type="text" th:field="*{name}" placeholder="username" required>
+        </br>
+        <label >Password:</label>
+        <input id="password" style="margin-left:5px" type="password" th:field="*{password}" value="" placeholder="password" required>
+        </br>
+        <label>Email:</label>
+        <input id="email" style="margin-left:33px"type="email" th:field="*{email}" placeholder="email" value="">
+        </br>
+        <label>Age:</label>
+        <input id="age" style="margin-left:43px"type="number" th:field="*{age}" placeholder="age" value="">
+        </br>
+        <button onclick="document.getElementById('pp').innerHTML='YES'"
+                type="submit" class="btn btn-info col-2" value="Sign Up">Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+
+
+
+</html>
